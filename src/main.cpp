@@ -73,6 +73,9 @@ int main()
     
     
     Ball ball(window);
+    Ball ball_2(window);
+
+    ball_2.setPosition(sf::Vector2f({ 200,200 }));
     
    
     
@@ -92,7 +95,11 @@ int main()
         
         
         update_ball(dt, ball);
+        update_ball(dt, ball_2);
+
+        window.draw(ball_2);
         window.draw(ball);
+
         window.display();
 
         
